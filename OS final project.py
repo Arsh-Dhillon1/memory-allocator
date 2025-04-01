@@ -165,7 +165,7 @@ def visualize_memory(memory_status, ax, memory_size, tracker):
                 color_map = cm.get_cmap('viridis')
                 color = color_map(block.process_id / tracker.process_count) if tracker.process_count > 0 else 'red'
             else:
-                color = 'red'  # error case.
+                color = 'red'  
 
         rect = plt.Rectangle((block.start, y), block.size, height, color=color)
         ax.add_patch(rect)
@@ -194,8 +194,7 @@ def update(frame, tracker, fig, ax, memory_size):
     """
     Update function for the animation. This function is called repeatedly.
     """
-    # Simulate allocation and deallocation
-    if random.random() < 0.3:  # 30% chance of allocation
+    if random.random() < 0.3:  
         size = random.randint(1, memory_size // 5)
         strategy = random.choice(["first_fit", "best_fit", "worst_fit"])
         start = tracker.allocate(size, strategy)
