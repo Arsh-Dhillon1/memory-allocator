@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import random
-import matplotlib.cm as cm  # Import colormap module
+import matplotlib.cm as cm
 
 class MemoryBlock:
     """
@@ -45,7 +45,7 @@ class MemoryTracker:
         for i, block in enumerate(self.memory):
             if block.status == "free" and block.size >= size:
                 return self._split_and_allocate(i, size)
-        return None  # Not enough memory
+        return None 
 
     def _allocate_best_fit(self, size):
         """Best Fit Allocation Strategy"""
@@ -76,7 +76,7 @@ class MemoryTracker:
     def _split_and_allocate(self, index, size):
         """Helper function to split a memory block and allocate part of it."""
         block = self.memory[index]
-        self.process_count += 1  # Increment process counter for unique ID
+        self.process_count += 1  
         if block.size == size:
             block.status = "allocated"
             block.process_id = self.process_count
