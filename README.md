@@ -11,13 +11,7 @@ This project provides a real-time visualization of memory allocation using Pytho
 * **Informative Display:** Shows total memory, free memory, allocated memory, fragmentation percentage, and number of free blocks.
 * **Process ID Display:** Displays process IDs within allocated memory blocks.
 * **Free Block Information:** Displays the address range of free memory blocks.
-* **Web Interface:** Uses Flask to provide a web interface for running the simulation.
-
 ## Technologies Used
-
 * **Python:** The core programming language.
-* **Flask:** A web framework for creating the web interface.
 * **Matplotlib:** A plotting library for creating the memory visualization.
 * **matplotlib.animation:** For creating the real-time animation.
-* **HTML & JavaScript:** For the web page and interactive elements.
-* **Server-Sent Events (SSE):** For real-time data transfer to the browser.
