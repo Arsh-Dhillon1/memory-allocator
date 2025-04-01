@@ -225,3 +225,4 @@ if __name__ == "__main__":
     ani = animation.FuncAnimation(fig, update, fargs=(tracker, fig, ax, memory_size), interval=500, blit=False)
 
     plt.show()
+    # Code is done
